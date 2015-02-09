@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="simplechat.css">
+  
+  <style>
+    #simple-chat-container {
+      width: 20rem;
+      height: 27rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="simple-chat-container"></div>
+  
+  <script src="https://cdn.pubnub.com/pubnub.min.js"></script>
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="simplechat.js"></script>
+  <script>
+    simpleChat('simple-chat-container', 'publish_key', 'subscribe_key', 'channel');
+  </script>
+</body>
+</html>

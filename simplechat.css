@@ -1,0 +1,58 @@
+.simplechat-container {
+  position: relative;
+  height: 100%;
+  color: white;
+  font-family: sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.simplechat-header {
+  background-color: #566481;
+  padding: 0.625rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.simplechat-chat-container {
+  overflow-y: auto;
+  text-align: center;
+  background-color: #323232;
+  max-height: 100%;
+}
+
+.simplechat {
+  list-style: none;
+  text-align: left;
+}
+
+.simplechat li {
+  margin: 1em 0;
+  whitespace: pre-line;
+  line-height: 1.2;
+}
+
+.simplechat small {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: gray;
+}
+
+.simplechat-container input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.3125rem 0;
+  border-radius: 0;
+  background-color: white;
+}
+
+::selection {
+  background-color: #757575;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #757575;
+  color: white;
+}
