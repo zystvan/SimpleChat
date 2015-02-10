@@ -3,15 +3,29 @@
 <head>
   <link rel="stylesheet" href="simplechat.css">
   
+  <title>SimpleChat</title>
+  
   <style>
+    body {
+      overflow: hidden;
+    }
+    
     #simple-chat-container {
       width: 20rem;
       height: 27rem;
+      margin-left: 50vw;
+      -webkit-transform: translateX(-52.5%);
+      -moz-transform: translateX(-52.5%);
+      -ms-transform: translateX(-52.5%);
+      -o-transform: translateX(-52.5%);
+      transform: translsateX(-52.5%);
     }
   </style>
 </head>
 <body>
   <div id="simple-chat-container"></div>
+  
+  <a href="https://github.com/KK4OXJ/SimpleChat">Back to GitHub repository</a>
   
   <script src="https://cdn.pubnub.com/pubnub.min.js"></script>
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>

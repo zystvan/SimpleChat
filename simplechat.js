@@ -1,4 +1,4 @@
-var PUBNUB
+var PUBNUB;
 
 // Simple utitlity function for formatting a time or a date
 function leftPad(string, maxLength, padding) {
@@ -21,7 +21,7 @@ function simpleChat(id, pubKey, subKey, channel) {
   });
   
   // insert the necessary HTML
-  $('#' + id).html('<div class=\"simplechat-container\"><div class=\"simplechat-chat-container\"><div class=\"simplechat-header\">Simple Chat</div><ul class=\"simplechat chat\"></ul></div><input type=\"text\" placeholder=\"Type text & hit enter\" maxlength=\"200\" class=\"input\"></div>');
+  $('#' + id).html('<div class=\"simplechat-container\"><div class=\"simplechat-chat-container\"><div class=\"simplechat-header\">simpleChat</div><ul class=\"simplechat chat\"></ul></div><input type=\"text\" placeholder=\"Type text & hit enter\" maxlength=\"200\" class=\"input\"></div>');
 
   var box = $('#' + id + ' .chat')[0];
   var input = $('#' + id + ' .input')[0];
@@ -29,7 +29,7 @@ function simpleChat(id, pubKey, subKey, channel) {
   // get the users name
   var name = prompt("Name, please:");
   
-  if (name == null || name == '') {
+  if (!name) {
     name = 'Anonymous';
   }
   
@@ -43,6 +43,7 @@ function simpleChat(id, pubKey, subKey, channel) {
         var typingName = text.substring(0, text.indexOf(' is typing') || 0);
         if (typingName !== name) {
           $('.typing-' + typingName).remove();
+          
           box.innerHTML = '<li class="typing-' + typingName + '"><small>' + typingName + ' is typing</small></li>' + box.innerHTML;
         }
       } else if (text.indexOf(' joined ') > -1) {
@@ -55,6 +56,7 @@ function simpleChat(id, pubKey, subKey, channel) {
     }
   });
   
+  // let other people know that you joined the chat (and what time you joined)
   var d = new Date();
   PUBNUB.publish({
     channel: channel,
@@ -83,11 +85,11 @@ function simpleChat(id, pubKey, subKey, channel) {
             ' (GMT-' + leftPad((d.getTimezoneOffset() / 60) * 100, 4, '0') + ')'
       });
       input.value = '';
-    } else if (input.value.length === 1) {
+    } else if (input.value.length == 1) {
       PUBNUB.publish({
         channel: channel,
-        message: '<small>' + name + ' is typing' + '</small>'
+        message: name + ' is typing'
       });
     }
   });
-};
+}

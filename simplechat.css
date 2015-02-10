@@ -1,6 +1,6 @@
 .simplechat-container {
-  position: relative;
   height: 100%;
+  position: relative;
   color: white;
   font-family: sans-serif;
   font-size: 16px;
@@ -9,6 +9,8 @@
 }
 
 .simplechat-header {
+  width: 100%;
+  box-sizing: border-box;
   background-color: #566481;
   padding: 0.625rem;
   text-align: center;
@@ -16,10 +18,11 @@
 }
 
 .simplechat-chat-container {
+  width: 100%;
+  max-height: 100%;
   overflow-y: auto;
   text-align: center;
   background-color: #323232;
-  max-height: 100%;
 }
 
 .simplechat {
