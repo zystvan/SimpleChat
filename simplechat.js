@@ -21,7 +21,7 @@ function simpleChat(id, pubKey, subKey, channel) {
   });
   
   // insert the necessary HTML
-  $('#' + id).html('<div class=\"simplechat-container\"><div class=\"simplechat-chat-container\"><div class=\"simplechat-header\">simpleChat</div><ul class=\"simplechat chat\"></ul></div><input type=\"text\" placeholder=\"Type text & hit enter\" maxlength=\"200\" class=\"input\"></div>');
+  $('#' + id).html('<div class=\"simplechat-container\"><div class=\"simplechat-chat-container\"><div class=\"simplechat-header\">Chat</div><ul class=\"simplechat chat\"></ul></div><input type=\"text\" placeholder=\"Type text & hit enter\" maxlength=\"200\" class=\"input\"></div>');
 
   var box = $('#' + id + ' .chat')[0];
   var input = $('#' + id + ' .input')[0];
