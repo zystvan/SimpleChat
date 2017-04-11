@@ -19,4 +19,4 @@ The chat uses [PubNub](https://www.pubnub.com), which is where you'll need to ge
 
 -----
 
-Made by [Annunziato Tocci](http://tocci.org) who does <strike>some</strike> most of the hard work, and [Zeke Y](https://kk4oxj.github.io), who started the project and pretends to help :D:
+Made by [Annunziato Tocci](http://tocci.org) who does <strike>some</strike> most of the hard work, and [Zeke Y](https://zystvan.com/), who started the project and pretends to help :D:
